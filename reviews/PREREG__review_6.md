@@ -1,0 +1,44 @@
+# Review 6 of `experiments/revision_r1/PREREGISTERED.md` (v3 after the round-5 fixes; git `5e29f54`, 799 lines, working tree identical to HEAD, sha256 `2e3365abb828810c0c7bbd23aea1e88e3d514331de331cf7f62726f2c2c13d47`)
+
+Reviewer role: independent statistician (CV inference, multiple testing, compute protocols on shared hardware) and MIML practitioner; did not write v1–v3 or reviews 1–5. Date: 2026-10-13.
+
+Scope of this round, as set by the task: verify the three round-5 fixes (m1 storage key and H5 key; m2 deposit self-hash; m3 §6.1 exceptions, fallback deadline, serialisation) exactly; confirm nothing else changed since `d2c1103`; confirm the new text contradicts no other section and no row of `DECISIONS.md`.
+
+## What I checked
+
+| check | result |
+|---|---|
+| `git diff d2c1103 -- experiments/revision_r1/PREREGISTERED.md` | Six hunks, all in scope: header "Deposited version" row; §1.5 `<condition>` line and a new "H5 key" line; §1.8 first paragraph; §6.1 row 1; §6.1 fallback bullet; the appended "Response to `PREREG__review_5.md`" table. No other line of the file changed. |
+| `git diff d2c1103 --stat`; `git show --stat 5e29f54` | Only two files changed since `d2c1103`: this document and `PREREG__review_5.md` (the round-5 review itself, 95 added lines). `power_table.py`, `T05__power_table.txt`, `DECISIONS.md` and every other file are untouched, so no number in §7 can have moved. |
+| Round-5 response table vs the hunks | Each of the three rows describes exactly what the corresponding hunks do; no row claims a change that was not made. |
+| Stale phrases | `grep` for the superseded wording "before any TabPFN revision fit": gone. "to be filled" now appears in the header row, §1.8 and the response table, consistently with the same meaning. |
+| `DECISIONS.md`, every row | Nothing in the new text touches a user decision. The new C-first serialisation under the fallback is the same ordering as the 2026-10-12 row "GPU arms wait for NVIDIA Inception credits; all local work first". The 2026-10-13 budget row (no unit dropped without a user decision) is unaffected: the serialisation reorders, it does not descope. |
+
+## Part 1 — The three round-5 fixes, verified one by one
+
+**m1 (storage key; H5 key): resolved.** §1.5 now joins condition tokens with `+` and gives the example `control-s1+seed-s3`; the listed token order (main / leak / control / padded / sub / seed) fixes the join order by example, which is enough for a doer. I enumerated the previously colliding units: H2-B MIMLNN under {leak, control-s0..s2} × Octave seeds {0..4} × inner folds now have distinct paths (`purged/MIMLNN/<ratio,λ>/leak+seed-s3/r0_f2_i1.npz` vs `.../control-s1+seed-s3/r0_f2_i1.npz`), and `main+seed-s<k>` serves the H1 MIMLNN units. The H5 key is complete: `<arm>` ∈ {`mlp_bagmean`, `abmil`}, `<config>` = one of the five surrogates named in H5, `<condition>` = `seed-s0..s2`, matching H5's seeds {0, 1, 2}; `<version>` = original and `<dataset>` ∈ {Scene, Birds, MSRC v2, Letter Frost} follow from H5's settings. The names differ from the ones review 5 suggested; any consistent names are fine. The `seed-s0..s4` token also covers KDIS if T03-a fails and §1.3's 5-seed rule is extended to it. One residual collision of the same class, not among those review 5 enumerated, is finding 1 below.
+
+**m2 (self-referential hash): resolved.** The header row and §1.8 now say the same thing in the same order: the deposited copy reads "to be filled"; one follow-up commit records that copy's commit hash, sha256 and the archive URL/DOI; the archive's checksum is binding. A reader who downloads the archived file and finds "to be filled" in that row is told in the file itself why, and where the hash lives. The "Public timestamp" row still also says the URL/DOI "is written here"; writing it in both rows is redundant, not contradictory. §1.8's "Deposited before step 1 of either queue" agrees with §6.0's "Step 0 of both queues is the deposit". The deposit list names reviews 1–4 and "any later review files"; reviews 5 and this one fall under that clause.
+
+**m3 (§6.1 device table, fallback deadline, serialisation): resolved.** (i) Row 1 now excepts "§1.9 and T03-g", and row 3 assigns exactly "§1.9 TabPFN arms, T03-g TabPFN part" to MPS; §6.0 C-queue step 8 and §6.8's heading say the same. §5, H3's same-device Yeast pair, H4's classifier (`device=G`) and §6.9 all still resolve to G through row 1. (ii) The fallback must be recorded "before the first G-queue fit"; G-queue step 1 is `DEVICE_LOG.md` and step 2 (§5) is the first G fit, so the deadline is well defined and C-tail MPS fits made earlier cannot bar the switch (they are MPS results compared only with MPS results, per row 3 and §1.9). (iii) "Under the fallback the two queues ... serialise, C queue first: G-queue items run on MPS only after the C queue's runs are complete" is consistent with §6.0 C-queue step 8 ("these items move to the G queue, which then runs on MPS"), with the §6.1 rule that no MPS TabPFN process runs during a timed C batch, and with cross-queue dependency 3 (the moved §1.9 multiview arm waits for G-queue step 4, which now comes after the C runs). §6.0's opening phrase "two independent queues" describes the no-fallback case; §6.1 now states what replaces it under the fallback. No contradiction.
+
+## Part 2 — Findings
+
+**1. The prediction path still cannot separate the two canonical-split TabPFN runs that the plan requires on two devices, so the no-overwrite rule stops one of them (same defect class as round-5 m1).**
+§1.9 "Same-device comparison": "each §1.9 TabPFN arm also runs once on the **canonical** split on MPS (a sixth run) ... never [compared] with the G canonical run." The G canonical run is the H1 unit of the same arm on the same split (Scene, Reuters, Birds (MLSP 2013), Protein ×4, VOC2012 are all H1 rows with canonical splits; §1.9 lists exactly those datasets). Both runs are `<dataset>/original/tabpfn_bagmean/<config>/main/r0_f<k>.npz` (and likewise `tabpfn_multiview`): same dataset, version, arm, config, condition, repeat and fold, because the path has no device token and `main` is the only applicable condition. `rcv10` does not fit the sixth run either: it is defined for the seed-{10..14} repeated design, and the plan assigns the canonical run no repeat index within it. §1.5 asserts "No two units share a path, and a writer refuses to overwrite an existing file", so whichever of the two runs arrives second is refused, exactly the failure review 5 described for MIMLNN seeds. Worse than a stop: if the doer resolves it by filing both under one path with an ad-hoc convention, G and MPS predictions become indistinguishable in the released manifest, which breaks §6.1's "G and MPS are never mixed within a comparison" and §6.9's "the manuscript reports the device of every row".
+The same gap applies to the pair §6.9 (G) / T03-g (MPS) on Letter Frost `tabpfn_bagmean`: both are fits on the *submitted* seed-42 single 5-fold split, which is neither the H1 5×5 design (`r0..r4`) nor `rcv10`, so neither run has a defined `<version>`/`r` and the two would naturally be given the same path.
+*Fix (one line in §1.5).* Add a device token to `<condition>`, e.g. `+g` / `+mps`, written for every TabPFN unit (`main+g`, `main+mps`, `leak+g`, `padded-s1+g`, …; CPU arms carry no device token). Name the version for runs on the submitted seed-42 5-fold splits (e.g. `<version>` = `submitted5`, `r0_f0..4`) so §6.9's Letter Frost runs and T03-g have a path. This changes no experiment and no statistic.
+
+## Notes (no action required)
+
+- **N1.** §1.9 still calls itself "the one stated exception to §6.1" while §6.1 row 1 now lists two exceptions (§1.9 and T03-g). Both readings reconcile (row 3 is the one MPS row), and the wording predates the round-5 fix; a two-word edit when the file is next touched.
+- **N2.** The header "History" and "Version control" rows stop at review 4 and commit `b72856e`; `d2c1103` (round-5 text) and `5e29f54` (this text) are not listed, although the round-5 response table is present at the end. Not a contradiction; the deposit commit will in any case be the one recorded by the m2 procedure.
+- **N3.** Review 5's N1–N4 remain as stated; nothing in the round-5 fixes touched them.
+
+## Summary
+
+The round-5 fixes are exactly the ones requested, nothing else moved since `d2c1103`, and the new text contradicts neither another section nor `DECISIONS.md`. Testing the m1 fix's assertion that no two units share a path against the rest of the plan exposed one more collision of the same kind, between runs the plan deliberately performs on both devices (the §1.9 sixth run vs the H1 G run; §6.9 vs T03-g on Letter Frost). It is a one-token fix to the path key and changes no experiment, but as written it makes a required step unexecutable or, if worked around, mixes devices in the release.
+
+MAJOR: none. MINOR: 1.
+
+VERDICT: NOT RESOLVED — 1 findings

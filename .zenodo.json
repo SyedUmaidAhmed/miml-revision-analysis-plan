@@ -1,0 +1,12 @@
+{
+  "title": "Analysis plan for the revision of IEEE Access manuscript Access-2026-44676 (MIML benchmark re-examination)",
+  "upload_type": "other",
+  "description": "Binding pre-registration (analysis plan) for every new analysis in the revision of 'Re-examining the Multi-Instance Multi-Label Benchmark Suite', deposited before any revision experiment produced a number. Includes the plan (v3), the power-analysis script and its output, the original August 2026 pre-registration files, the superseded v2, nine independent reviews of the plan, and SHA-256 checksums.",
+  "creators": [
+    {"name": "Ahmed, Syed Umaid"},
+    {"name": "Tahir, Atif"},
+    {"name": "Waqas, Muhammad"}
+  ],
+  "license": "cc-by-4.0",
+  "keywords": ["multi-instance multi-label learning", "pre-registration", "analysis plan", "benchmark evaluation", "reproducibility"]
+}
