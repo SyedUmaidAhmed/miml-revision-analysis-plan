@@ -1,0 +1,22 @@
+T02 Q2 check, 2026-10-13, authorised by team-lead (provenance only: no bags, masks or metrics).
+Duplicate source rows (byte-identical to a lower-indexed row; source row i = bags[i][0], T01 §3),
+and the canonical pool (get_cv_splits test block; -1 = n mod 10 remainder) of each member.
+Command: experiments/revision_r1 inline script using h2_common.{load_constructed, source_rows,
+vector_id_map, canonical_splits}; ./.venv/bin/python -I, OMP_NUM_THREADS=1.
+
+emotions n 593  duplicate rows 0
+yeast    n 2417 duplicate rows 0
+medical  n 978  duplicate rows 11 in 7 groups (sizes 2,2,2,2,2,2,6); groups spanning >1 pool: 7 of 7;
+                cross-pool pairs: 18; groups touching the remainder: 0; groups whose labels differ: 2
+    [(30, 0), (445, 4)] LABELS DIFFER
+    [(173, 3), (301, 6)] labels_equal
+    [(235, 2), (246, 7), (310, 1), (376, 7), (607, 7), (818, 9)] labels_equal
+    [(314, 2), (398, 3)] labels_equal
+    [(327, 2), (357, 0)] LABELS DIFFER
+    [(748, 8), (853, 2)] labels_equal
+    [(797, 1), (873, 4)] labels_equal
+corel5k  n 4873 duplicate rows 2 in 2 groups; groups spanning >1 pool: 2 of 2; cross-pool pairs: 2;
+                groups touching the remainder: 0; groups whose labels differ: 1
+    [(611, 3), (2465, 4)] LABELS DIFFER
+    [(4675, 8), (4676, 5)] labels_equal
+(row, pool) pairs; the lowest index of each group is listed first.
