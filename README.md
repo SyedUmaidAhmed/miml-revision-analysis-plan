@@ -9,9 +9,9 @@ It is deposited **before any revision experiment has produced a number**.
 | plan/ | PREREGISTERED.md (v3 with its pre-deposit addendum; final and binding), power_table.py and its output, and the duplicate-row evidence behind the H2-A rule |
 | original_aug2026/ | the original MIML-PFN pre-registration, amendment and result (2026-08-14/15). These were local, unversioned files until 2026-10-12; their local dates and sha256 are in the plan's header. |
 | history/ | v2 of the revision plan (superseded) |
-| reviews/ | independent reviews 1–13 of the plan. Review 1 is the only record of v1. |
+| reviews/ | independent reviews 1–15 of the plan. Review 1 is the only record of v1. |
 
-Source repository commit: b85fc6d014548354cb2e4da2dbb4b74c8c5c904d.
+Source repository commit: 105475e188006b72411f1729fd92f0cea4018ba5.
 The checksum of plan/PREREGISTERED.md in this archive is binding (plan §1.8).
 
 ## Redactions

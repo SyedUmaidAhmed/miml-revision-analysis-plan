@@ -1,0 +1,29 @@
+# PREREG review 15 — review-14 fixes (final pre-archive plan gate), 2026-10-13
+
+Reviewer: independent (statistics / MIML / reproducible-experiment engineering). Did not write the plan, the addendum, the DECISIONS rows, the code or any earlier review.
+
+**Text reviewed.** `experiments/revision_r1/PREREGISTERED.md` at HEAD = `a9f796e` ("Plan: review-14 fixes"), clean in the working tree. Diff base `1ffab28` (the text reviewed in round 14). `git diff 1ffab28 HEAD --stat` touches **only** this file (4 insertions, 3 deletions; three edited paragraphs and one new change-table row). Source of truth: `revision_access_44676/DECISIONS.md` rows dated 2026-10-13 (lines 33–37: KDIS non-determinism fallback, deposit-line format, KDIS fallback labelling, grammar tightened, date upper bound).
+
+**Method.** (1) The four hunks read clause by clause against the review-14 finding F1 and its code-sync notes. (2) F1 cross-read against DECISIONS rows (11) and (13), `experiments/revision_r1/library_harness.py` (`kdis_block`, `KDIS_SEEDED`, `repeat_kind`, `condition_token`) and the unit-identity block of `experiments/revision_r1/run_nested_library.py` (lines 236–252). (3) §1.8's named close-only rules compared with `experiments/revision_r1/deposit_check.py` at HEAD and in the working tree (uncommitted T04 edit). (4) `git show --stat 933b185` for the "(committed, `933b185`)" claim. (5) Header line 8 compared with `1ffab28` by md5. (6) `tests/test_deposit_check.py` run on the working tree.
+
+## Verifications (pass)
+
+- **F1, §1.3.** New sentence: "In repetition k its `<seed>` is still set to k (k = 0..4), so its five configurations are not nominally identical; the runs nevertheless remain labelled uncontrolled." This is exactly DECISIONS row (11) ("MIMLBagging's own `<seed>`, which is then fixed to 0–4") combined with row (13) (labelled `rep-r0..r4`, `uncontrolled=true`, not `seed-sK`). Code agrees: `kdis_block(cand, seed)` rewrites the single `<seed>` tag to `<seed>k</seed>` only for `KDIS_SEEDED = ("MIMLBagging",)` and only when a repetition index is passed; `repeat_kind` returns `"rep"` for every KDIS candidate, so the token is `rep-rK` via `condition_token`. The `seed-sK` branch stays as written (conditional on byte-identical runs) and is unreachable in code, matching the plan's own "in practice" sentence. No selection rule, grid, seed list or trigger moved.
+- **F1, §1.5.** Sidecar sentence now: "records the repetition index, `uncontrolled: true` and, for MIMLBagging, the `<seed>` value used". Code: the identity dict gets `repetition=seed`, `uncontrolled=(repeat_kind == "rep")`, `block_seed=seed` for MIMLBagging (`None` otherwise), and `classifier_block=kdis_block(cand, seed)` (which itself contains the rewritten `<seed>` tag); the sidecar is written as `{"identity": ident, ...}` (`run_nested_library.py:317`). Plan and code agree; a reused unit with a different identity is refused (line 257–258).
+- **§1.8 close-only rules vs `deposit_check.py`.** The plan names three further rules: placeholder (run of three or more `N` or `X`, case-insensitive, or `...`), DataCite test prefix `10.5072/`, and "sandbox". Code: `PLACEHOLDER_RE = N{3,}|X{3,}|\.{3}` with `re.IGNORECASE`; `TEST_DOI_PREFIXES = ("10.5072/",)` via `startswith`; `"sandbox" in doi.lower()`. All three are present at HEAD **and** in the working tree, each returns `None` (guard closed) and none can open the guard. The working-tree copy additionally implements `re.ASCII`, the `[A-Za-z0-9]` terminal and `MIN_DATE = 2026-10-13` (rows 14), consistent with §1.8's earlier sentences. Tests on the working tree: `84 passed`.
+- **"(committed, `933b185`)" is true.** `git show --stat 933b185` lists `experiments/revision_r1/deposit_check.py | 81 ++++` (new file) and `tests/test_deposit_check.py | 171 +++++++`. The stale "(to be committed before the first real-data run)" is gone.
+- **Line 8 unchanged.** md5 of `sed -n 8p` is `3674962…5896` at both `1ffab28` and HEAD; still `| Public timestamp | **PENDING (user action).** … |`.
+- **Nothing else moved.** Hunks are confined to the §1.3 F8 bullet (one inserted sentence), the §1.5 sidecar sentence, the §1.8 paragraph (committed-hash substitution plus the three named rules), and one appended change-table row "review 14 (F1 and notes)" whose three cells correctly summarise the three edits and point at §1.3, §1.5, §1.8. No threshold, decision rule, token grammar, grid, seed list, deposit list or header cell changed.
+
+## Findings
+
+None material.
+
+## Notes (not findings; no plan change needed)
+
+- **"sandbox" is matched case-insensitively in code** (`doi.lower()`), while §1.8 says only "must not contain 'sandbox'". The code is strictly more closing than the sentence; a reader of the plan cannot be misled into believing something opens the guard that does not. Acceptable as written.
+- **Code-sync (row 15):** neither HEAD's nor the working-tree `deposit_check.py` yet compares the date with the current UTC date (`grep -i utc|today` is empty in both the module and its tests). The plan states the rule; the brief notes T04 is adding it. The committed copy at HEAD also predates rows (14); the working-tree copy carries row (14). This is a code task, not a plan defect, and the guard is closed either way until a real deposit line exists.
+- The change table's source line still says it holds "the fifteen `DECISIONS.md` rows", and the new "review 14" row is not a DECISIONS row; the table already contained non-DECISIONS rows ("T02 acceptance check", "T02 duplicates, rule B"), so the precedent is established and the row's content is a traceability aid, not a rule.
+- The History row (header line 6) ends its review chronology at round 12; rounds 13–15 are recorded only in the review files and the change table. Review 14 noted the same; cosmetic.
+
+VERDICT: RESOLVED, 100%
