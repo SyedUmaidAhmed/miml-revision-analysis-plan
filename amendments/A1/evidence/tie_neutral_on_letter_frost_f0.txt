@@ -1,0 +1,36 @@
+Letter Frost, 5x5 r0 f0, refit, AveH k=10. Columns: prereg miml_metrics | Mulan in-process | tn.ranking_four_mulan | tie-neutral (AMENDMENT A1)
+MIMLkNN     max|mulan_reimpl - inprocess| = 0.0e+00
+   OneError          0.2759 | 0.3103 | 0.3103 | 0.2847
+   Coverage          18.1379 | 17.4138 | 17.4138 | 16.5508
+   RankingLoss       0.6593 | 0.3713 | 0.3713 | 0.3351
+   AveragePrecision  0.4842 | 0.4754 | 0.4754 | 0.5065
+DMIMLkNN    max|mulan_reimpl - inprocess| = 1.1e-16
+   OneError          0.2069 | 0.2069 | 0.2069 | 0.2069
+   Coverage          9.9655 | 9.8966 | 9.8966 | 9.9310
+   RankingLoss       0.1494 | 0.1486 | 0.1486 | 0.1490
+   AveragePrecision  0.6844 | 0.6845 | 0.6845 | 0.6845
+MIMLBRkNN   max|mulan_reimpl - inprocess| = 0.0e+00
+   OneError          0.1379 | 0.2414 | 0.2414 | 0.1724
+   Coverage          11.1034 | 10.7931 | 10.7931 | 10.8310
+   RankingLoss       0.1979 | 0.1514 | 0.1514 | 0.1545
+   AveragePrecision  0.6954 | 0.6835 | 0.6835 | 0.6893
+MIMLMAPkNN  max|mulan_reimpl - inprocess| = 0.0e+00
+   OneError          0.1724 | 0.1724 | 0.1724 | 0.1724
+   Coverage          9.5862 | 9.5172 | 9.5172 | 9.5517
+   RankingLoss       0.1408 | 0.1400 | 0.1400 | 0.1404
+   AveragePrecision  0.6912 | 0.6913 | 0.6913 | 0.6912
+MIMLIBLR    max|mulan_reimpl - inprocess| = 0.0e+00
+   OneError          0.7241 | 0.8966 | 0.8966 | 0.7908
+   Coverage          15.0690 | 15.8621 | 15.8621 | 15.0517
+   RankingLoss       0.3285 | 0.3425 | 0.3425 | 0.3259
+   AveragePrecision  0.3155 | 0.3076 | 0.3076 | 0.3214
+MIMLDGC     max|mulan_reimpl - inprocess| = 0.0e+00
+   OneError          0.1034 | 0.1034 | 0.1034 | 0.1034
+   Coverage          10.7241 | 10.8621 | 10.8621 | 10.4483
+   RankingLoss       0.1674 | 0.1497 | 0.1497 | 0.1476
+   AveragePrecision  0.7161 | 0.7154 | 0.7154 | 0.7159
+MIMLBagging max|mulan_reimpl - inprocess| = 0.0e+00
+   OneError          0.5172 | 0.4828 | 0.4828 | 0.5054
+   Coverage          16.9655 | 17.2759 | 17.2759 | 15.8759
+   RankingLoss       0.4921 | 0.3240 | 0.3240 | 0.2995
+   AveragePrecision  0.4742 | 0.4509 | 0.4509 | 0.4554

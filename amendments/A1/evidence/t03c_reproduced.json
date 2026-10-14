@@ -1,0 +1,36 @@
+{
+ "fold0": {
+  "archive_matches_T03c_json": 0.0,
+  "authors": {
+   "AveragePrecision": 0.685269915157425,
+   "Coverage": 10.586206896551724
+  },
+  "deposited_scorer": {
+   "AveragePrecision": 0.6851499751274399,
+   "Coverage": 10.655172413793103
+  },
+  "lamda_convention_py": {
+   "AveragePrecision": 0.685269915157425,
+   "Coverage": 10.586206896551724
+  },
+  "max_abs_lamda_py_minus_authors": 0.0,
+  "rows_with_exact_ties": 29
+ },
+ "fold4": {
+  "archive_matches_T03c_json": 0.0,
+  "authors": {
+   "AveragePrecision": 0.597987759966025,
+   "Coverage": 10.857142857142858
+  },
+  "deposited_scorer": {
+   "AveragePrecision": 0.598153103881369,
+   "Coverage": 10.857142857142858
+  },
+  "lamda_convention_py": {
+   "AveragePrecision": 0.597987759966025,
+   "Coverage": 10.857142857142858
+  },
+  "max_abs_lamda_py_minus_authors": 0.0,
+  "rows_with_exact_ties": 28
+ }
+}

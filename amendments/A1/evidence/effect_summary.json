@@ -1,0 +1,1674 @@
+{
+ "counts_over_60_dataset_metric_pairs": {
+  "paper_best": {
+   "improved": 41,
+   "unchanged": 18,
+   "worse": 1
+  },
+  "tuned_best": {
+   "improved": 48,
+   "unchanged": 10,
+   "worse": 2
+  }
+ },
+ "defaults": {
+  "max_abs_probe_run_minus_stored": 0.0,
+  "other_per_fold_keys_not_corrected": [],
+  "rows": 735
+ },
+ "effect": {
+  "birdsong": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.01004163766516708,
+    "paper_best": {
+     "corrected": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.7535169983688481
+     ],
+     "delta": 0.004363719336219263,
+     "submitted": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.7491532790326288
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.7535169983688481
+     ],
+     "delta": 0.004363719336219263,
+     "submitted": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.7491532790326288
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.20399999999999974,
+    "paper_best": {
+     "corrected": [
+      "birdsong/MIMLMAPkNN",
+      4.228
+     ],
+     "delta": -0.14000000000000057,
+     "submitted": [
+      "birdsong/MIMLMAPkNN",
+      4.368
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "birdsong/DMIMLkNN_AveH(10)",
+      4.356
+     ],
+     "delta": -0.16000000000000014,
+     "submitted": [
+      "birdsong/DMIMLkNN_AveH(10)",
+      4.516
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0018947368421052824,
+    "paper_best": {
+     "corrected": [
+      "birdsong/MIMLDGC",
+      0.07199999999999998
+     ],
+     "delta": -0.0018947368421052685,
+     "submitted": [
+      "birdsong/MIMLDGC",
+      0.07389473684210525
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.07684210526315788
+     ],
+     "delta": -0.0018947368421052546,
+     "submitted": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.07873684210526313
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.02400000000000002,
+    "paper_best": {
+     "corrected": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.22400000000000003
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.22400000000000003
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.22400000000000003
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.22400000000000003
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.005303828197945892,
+    "paper_best": {
+     "corrected": [
+      "birdsong/MIMLMAPkNN",
+      0.10802914960856136
+     ],
+     "delta": -0.00458277310924371,
+     "submitted": [
+      "birdsong/MIMLMAPkNN",
+      0.11261192271780507
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.11458404079580549
+     ],
+     "delta": -0.003020588235294122,
+     "submitted": [
+      "birdsong/MIMLDGC_AveH(10)",
+      0.11760462903109961
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9
+   ]
+  },
+  "emotions": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.002165725047081013,
+    "paper_best": {
+     "corrected": [
+      "emotions/MIMLDGC_MaxH(10)",
+      0.8020291902071565
+     ],
+     "delta": 0.00021657250470819012,
+     "submitted": [
+      "emotions/MIMLDGC_MaxH(10)",
+      0.8018126177024483
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "emotions/MIMLDGC_MaxH(10)",
+      0.8020291902071565
+     ],
+     "delta": 0.00021657250470819012,
+     "submitted": [
+      "emotions/MIMLDGC_MaxH(10)",
+      0.8018126177024483
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.013559322033898313,
+    "paper_best": {
+     "corrected": [
+      "emotions/MIMLIBLR_MinH(10)",
+      1.764406779661017
+     ],
+     "delta": -0.006779661016949046,
+     "submitted": [
+      "emotions/MIMLIBLR_MinH(10)",
+      1.771186440677966
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "emotions/MIMLIBLR_MinH(10)",
+      1.764406779661017
+     ],
+     "delta": -0.006779661016949046,
+     "submitted": [
+      "emotions/MIMLIBLR_MinH(10)",
+      1.771186440677966
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0011299435028248872,
+    "paper_best": {
+     "corrected": [
+      "emotions/DMIMLkNN_MaxH(10)",
+      0.19406779661016949
+     ],
+     "delta": -0.0011299435028248594,
+     "submitted": [
+      "emotions/DMIMLkNN_MaxH(10)",
+      0.19519774011299434
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "emotions/DMIMLkNN_MaxH(10)",
+      0.19406779661016949
+     ],
+     "delta": -0.0011299435028248594,
+     "submitted": [
+      "emotions/DMIMLkNN_MaxH(10)",
+      0.19519774011299434
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.003389830508474634,
+    "paper_best": {
+     "corrected": [
+      "emotions/MIMLDGC_MaxH(10)",
+      0.25762711864406784
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "emotions/MIMLDGC_MaxH(10)",
+      0.25762711864406784
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "emotions/MIMLDGC_MaxH(10)",
+      0.25762711864406784
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "emotions/MIMLDGC_MaxH(10)",
+      0.25762711864406784
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.001906779661016933,
+    "paper_best": {
+     "corrected": [
+      "emotions/MIMLBRkNN_MinH(10)",
+      0.16423258003766478
+     ],
+     "delta": -0.0006120527306967827,
+     "submitted": [
+      "emotions/MIMLBRkNN_MinH(10)",
+      0.16484463276836156
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "emotions/MIMLBRkNN_MinH(10)",
+      0.16423258003766478
+     ],
+     "delta": -0.0006120527306967827,
+     "submitted": [
+      "emotions/MIMLBRkNN_MinH(10)",
+      0.16484463276836156
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    2,
+    5,
+    7,
+    9
+   ]
+  },
+  "letter_carroll": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.004830278022895207,
+    "paper_best": {
+     "corrected": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      0.6843419902249155
+     ],
+     "delta": 0.002114872006583224,
+     "submitted": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      0.6822271182183323
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      0.6843419902249155
+     ],
+     "delta": 0.002114872006583224,
+     "submitted": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      0.6822271182183323
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.290909090909091,
+    "paper_best": {
+     "corrected": [
+      "letter_carroll/DMIMLkNN_AveH(10)",
+      9.50909090909091
+     ],
+     "delta": -0.2787878787878775,
+     "submitted": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      9.787878787878787
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "letter_carroll/DMIMLkNN_AveH(10)",
+      9.50909090909091
+     ],
+     "delta": -0.2787878787878775,
+     "submitted": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      9.787878787878787
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0011655011655011815,
+    "paper_best": {
+     "corrected": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      0.11841491841491844
+     ],
+     "delta": -0.0011655011655011677,
+     "submitted": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      0.11958041958041961
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      0.11841491841491844
+     ],
+     "delta": -0.0011655011655011677,
+     "submitted": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      0.11958041958041961
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.0060606060606061,
+    "paper_best": {
+     "corrected": [
+      "letter_carroll/MIMLDGC_MinH(10)",
+      0.22424242424242422
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "letter_carroll/MIMLDGC_MinH(10)",
+      0.22424242424242422
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "letter_carroll/MIMLDGC_MinH(10)",
+      0.22424242424242422
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "letter_carroll/MIMLDGC_MinH(10)",
+      0.22424242424242422
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.003963865476763417,
+    "paper_best": {
+     "corrected": [
+      "letter_carroll/MIMLMAPkNN_AveH(10)",
+      0.14158847038215358
+     ],
+     "delta": -0.003165253045342181,
+     "submitted": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      0.14475372342749576
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "letter_carroll/MIMLMAPkNN_AveH(10)",
+      0.14158847038215358
+     ],
+     "delta": -0.003165253045342181,
+     "submitted": [
+      "letter_carroll/MIMLDGC_AveH(10)",
+      0.14475372342749576
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "letter_frost": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.005123156500598136,
+    "paper_best": {
+     "corrected": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      0.6800184034733183
+     ],
+     "delta": 0.0012603334498967333,
+     "submitted": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      0.6787580700234216
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      0.6800184034733183
+     ],
+     "delta": 0.0012603334498967333,
+     "submitted": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      0.6787580700234216
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.09285714285714342,
+    "paper_best": {
+     "corrected": [
+      "letter_frost/MIMLMAPkNN",
+      9.471428571428572
+     ],
+     "delta": -0.05714285714285694,
+     "submitted": [
+      "letter_frost/MIMLMAPkNN",
+      9.528571428571428
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      9.807142857142857
+     ],
+     "delta": -0.05714285714285694,
+     "submitted": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      9.864285714285714
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0010989010989011228,
+    "paper_best": {
+     "corrected": [
+      "letter_frost/MIMLDGC_AveH(10)",
+      0.10769230769230771
+     ],
+     "delta": -0.001098901098901095,
+     "submitted": [
+      "letter_frost/MIMLDGC_AveH(10)",
+      0.10879120879120881
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "letter_frost/MIMLDGC_AveH(10)",
+      0.10769230769230771
+     ],
+     "delta": -0.001098901098901095,
+     "submitted": [
+      "letter_frost/MIMLDGC_AveH(10)",
+      0.10879120879120881
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.014285714285714346,
+    "paper_best": {
+     "corrected": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      0.22142857142857145
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      0.22142857142857145
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      0.22142857142857145
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      0.22142857142857145
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0033466226619626727,
+    "paper_best": {
+     "corrected": [
+      "letter_frost/MIMLMAPkNN",
+      0.14762947317474942
+     ],
+     "delta": -0.0014839001442057687,
+     "submitted": [
+      "letter_frost/MIMLMAPkNN",
+      0.1491133733189552
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      0.14867223659798848
+     ],
+     "delta": -0.0014004425707596913,
+     "submitted": [
+      "letter_frost/MIMLMAPkNN_AveH(10)",
+      0.15007267916874817
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    1,
+    3,
+    4
+   ]
+  },
+  "mscv2": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.0026707852632578133,
+    "paper_best": {
+     "corrected": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      0.7443563180458987
+     ],
+     "delta": 0.0009981167608286157,
+     "submitted": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      0.7433582012850701
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      0.7443563180458987
+     ],
+     "delta": 0.0009981167608286157,
+     "submitted": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      0.7433582012850701
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.06440677966101749,
+    "paper_best": {
+     "corrected": [
+      "mscv2/MIMLNN",
+      4.64576271186
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "mscv2/MIMLNN",
+      4.64576271186
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      4.777966101694916
+     ],
+     "delta": -0.04576271186440639,
+     "submitted": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      4.823728813559322
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.00036845983787768544,
+    "paper_best": {
+     "corrected": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      0.07118644067796615
+     ],
+     "delta": -0.00036845983787767156,
+     "submitted": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      0.07155490051584382
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      0.07118644067796615
+     ],
+     "delta": -0.00036845983787767156,
+     "submitted": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      0.07155490051584382
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.006779661016949268,
+    "paper_best": {
+     "corrected": [
+      "mscv2/MIMLNN",
+      0.25932203388
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "mscv2/MIMLNN",
+      0.25932203388
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "mscv2/DMIMLkNN_AveH(10)",
+      0.27796610169491526
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "mscv2/DMIMLkNN_AveH(10)",
+      0.27796610169491526
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0011481387083528138,
+    "paper_best": {
+     "corrected": [
+      "mscv2/MIMLNN",
+      0.0860209859
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "mscv2/MIMLNN",
+      0.0860209859
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      0.09096693836618797
+     ],
+     "delta": -0.000659487702306602,
+     "submitted": [
+      "mscv2/MIMLIBLR_AveH(10)",
+      0.09162642606849457
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "protein_azotobacter": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.018013308352837376,
+    "paper_best": {
+     "corrected": [
+      "protein_azotobacter/DMIMLkNN_AveH(10)",
+      0.5327323629031462
+     ],
+     "delta": 0.012873402902608522,
+     "submitted": [
+      "protein_azotobacter/DMIMLkNN_AveH(10)",
+      0.5198589600005377
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_azotobacter/DMIMLkNN_AveH(10)",
+      0.5327323629031462
+     ],
+     "delta": 0.012873402902608522,
+     "submitted": [
+      "protein_azotobacter/DMIMLkNN_AveH(10)",
+      0.5198589600005377
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.677500000000002,
+    "paper_best": {
+     "corrected": [
+      "protein_azotobacter/MIMLMAPkNN_AveH(10)",
+      9.135
+     ],
+     "delta": -0.5675000000000008,
+     "submitted": [
+      "protein_azotobacter/MIMLMAPkNN_AveH(10)",
+      9.7025
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_azotobacter/MIMLMAPkNN_AveH(10)",
+      9.135
+     ],
+     "delta": -0.5675000000000008,
+     "submitted": [
+      "protein_azotobacter/MIMLMAPkNN_AveH(10)",
+      9.7025
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.000543478260869569,
+    "paper_best": {
+     "corrected": [
+      "protein_azotobacter/MIMLDGC_MinH(10)",
+      0.05059782608695653
+     ],
+     "delta": -0.000543478260869569,
+     "submitted": [
+      "protein_azotobacter/MIMLDGC_MinH(10)",
+      0.0511413043478261
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_azotobacter/MIMLDGC_MinH(10)",
+      0.05059782608695653
+     ],
+     "delta": -0.000543478260869569,
+     "submitted": [
+      "protein_azotobacter/MIMLDGC_MinH(10)",
+      0.0511413043478261
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.019999999999999907,
+    "paper_best": {
+     "corrected": [
+      "protein_azotobacter/MIMLNN",
+      0.5828316498299999
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "protein_azotobacter/MIMLNN",
+      0.5828316498299999
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_azotobacter/DMIMLkNN_MinH(10)",
+      0.6925
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "protein_azotobacter/DMIMLkNN_MinH(10)",
+      0.6925
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.009833923439002107,
+    "paper_best": {
+     "corrected": [
+      "protein_azotobacter/DMIMLkNN_AveH(10)",
+      0.1272975833532878
+     ],
+     "delta": -0.00826817532862334,
+     "submitted": [
+      "protein_azotobacter/DMIMLkNN_AveH(10)",
+      0.13556575868191115
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_azotobacter/DMIMLkNN_AveH(10)",
+      0.1272975833532878
+     ],
+     "delta": -0.00826817532862334,
+     "submitted": [
+      "protein_azotobacter/DMIMLkNN_AveH(10)",
+      0.13556575868191115
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "protein_geobacter": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.023337566118734415,
+    "paper_best": {
+     "corrected": [
+      "protein_geobacter/DMIMLkNN_AveH(10)",
+      0.5817029617939694
+     ],
+     "delta": 0.010024502464210827,
+     "submitted": [
+      "protein_geobacter/DMIMLkNN_AveH(10)",
+      0.5716784593297586
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_geobacter/DMIMLkNN_AveH(10)",
+      0.5817029617939694
+     ],
+     "delta": 0.010024502464210827,
+     "submitted": [
+      "protein_geobacter/DMIMLkNN_AveH(10)",
+      0.5716784593297586
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.2621621621621628,
+    "paper_best": {
+     "corrected": [
+      "protein_geobacter/MIMLMAPkNN",
+      5.916216216216216
+     ],
+     "delta": -0.06216216215378445,
+     "submitted": [
+      "protein_geobacter/MIMLNN",
+      5.97837837837
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_geobacter/MIMLMAPkNN_AveH(10)",
+      5.951351351351351
+     ],
+     "delta": -0.17837837837837878,
+     "submitted": [
+      "protein_geobacter/MIMLMAPkNN_AveH(10)",
+      6.12972972972973
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0009652509652509772,
+    "paper_best": {
+     "corrected": [
+      "protein_geobacter/MIMLMAPkNN_AveH(10)",
+      0.06322393822393822
+     ],
+     "delta": -0.0009652509652509633,
+     "submitted": [
+      "protein_geobacter/MIMLMAPkNN_AveH(10)",
+      0.06418918918918919
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_geobacter/MIMLMAPkNN_AveH(10)",
+      0.06322393822393822
+     ],
+     "delta": -0.0009652509652509633,
+     "submitted": [
+      "protein_geobacter/MIMLMAPkNN_AveH(10)",
+      0.06418918918918919
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.02432432432432441,
+    "paper_best": {
+     "corrected": [
+      "protein_geobacter/MIMLNN",
+      0.46368999519000004
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "protein_geobacter/MIMLNN",
+      0.46368999519000004
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_geobacter/MIMLDGC_AveH(10)",
+      0.6270270270270271
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "protein_geobacter/MIMLDGC_AveH(10)",
+      0.6270270270270271
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.007893373130215209,
+    "paper_best": {
+     "corrected": [
+      "protein_geobacter/MIMLMAPkNN",
+      0.13233357059337775
+     ],
+     "delta": -0.0055302828131775505,
+     "submitted": [
+      "protein_geobacter/MIMLMAPkNN",
+      0.1378638534065553
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_geobacter/MIMLMAPkNN_AveH(10)",
+      0.13355110986632726
+     ],
+     "delta": -0.005761835722362024,
+     "submitted": [
+      "protein_geobacter/MIMLMAPkNN_AveH(10)",
+      0.13931294558868929
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "protein_haloarcula": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.018836799228742596,
+    "paper_best": {
+     "corrected": [
+      "protein_haloarcula/MIMLNN",
+      0.60600665241
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "protein_haloarcula/MIMLNN",
+      0.60600665241
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_haloarcula/DMIMLkNN_MinH(10)",
+      0.588791786586336
+     ],
+     "delta": 0.010928988158136699,
+     "submitted": [
+      "protein_haloarcula/DMIMLkNN_MinH(10)",
+      0.5778627984281993
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.4133333333333331,
+    "paper_best": {
+     "corrected": [
+      "protein_haloarcula/DMIMLkNN",
+      4.456666666666667
+     ],
+     "delta": -0.33333333333333304,
+     "submitted": [
+      "protein_haloarcula/MIMLNN",
+      4.79
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_haloarcula/MIMLMAPkNN_MinH(10)",
+      4.496666666666667
+     ],
+     "delta": -0.39999999999999947,
+     "submitted": [
+      "protein_haloarcula/MIMLMAPkNN_MinH(10)",
+      4.8966666666666665
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0014285714285714457,
+    "paper_best": {
+     "corrected": [
+      "protein_haloarcula/MIMLDGC_AveH(10)",
+      0.0819047619047619
+     ],
+     "delta": -0.0014285714285714457,
+     "submitted": [
+      "protein_haloarcula/MIMLDGC_AveH(10)",
+      0.08333333333333334
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_haloarcula/MIMLDGC_AveH(10)",
+      0.0819047619047619
+     ],
+     "delta": -0.0014285714285714457,
+     "submitted": [
+      "protein_haloarcula/MIMLDGC_AveH(10)",
+      0.08333333333333334
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.030000000000000138,
+    "paper_best": {
+     "corrected": [
+      "protein_haloarcula/MIMLNN",
+      0.43998353096000004
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "protein_haloarcula/MIMLNN",
+      0.43998353096000004
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_haloarcula/DMIMLkNN_MinH(10)",
+      0.6399999999999999
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "protein_haloarcula/DMIMLkNN_MinH(10)",
+      0.6399999999999999
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.011307767648969902,
+    "paper_best": {
+     "corrected": [
+      "protein_haloarcula/DMIMLkNN_MinH(10)",
+      0.1361756985977095
+     ],
+     "delta": -0.010831632458051466,
+     "submitted": [
+      "protein_haloarcula/DMIMLkNN_MinH(10)",
+      0.14700733105576097
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_haloarcula/DMIMLkNN_MinH(10)",
+      0.1361756985977095
+     ],
+     "delta": -0.010831632458051466,
+     "submitted": [
+      "protein_haloarcula/DMIMLkNN_MinH(10)",
+      0.14700733105576097
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "protein_pyrococcus": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.012643930508973694,
+    "paper_best": {
+     "corrected": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      0.5298137202345023
+     ],
+     "delta": 0.00454159632125406,
+     "submitted": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      0.5252721239132483
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      0.5298137202345023
+     ],
+     "delta": 0.00454159632125406,
+     "submitted": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      0.5252721239132483
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.24285714285714555,
+    "paper_best": {
+     "corrected": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      13.426190476190476
+     ],
+     "delta": -0.1619047619047631,
+     "submitted": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      13.588095238095239
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      13.426190476190476
+     ],
+     "delta": -0.1619047619047631,
+     "submitted": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      13.588095238095239
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0004120879120879245,
+    "paper_best": {
+     "corrected": [
+      "protein_pyrococcus/MIMLDGC",
+      0.058882783882783875
+     ],
+     "delta": -0.0004120879120879106,
+     "submitted": [
+      "protein_pyrococcus/MIMLDGC",
+      0.059294871794871785
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_pyrococcus/MIMLDGC_AveH(10)",
+      0.05947802197802197
+     ],
+     "delta": -0.0004120879120879106,
+     "submitted": [
+      "protein_pyrococcus/MIMLDGC_AveH(10)",
+      0.05989010989010988
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.021428571428571463,
+    "paper_best": {
+     "corrected": [
+      "protein_pyrococcus/MIMLNN",
+      0.5480958527700001
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "protein_pyrococcus/MIMLNN",
+      0.5480958527700001
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_pyrococcus/MIMLDGC_AveH(10)",
+      0.6214285714285714
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "protein_pyrococcus/MIMLDGC_AveH(10)",
+      0.6214285714285714
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.003860391913839384,
+    "paper_best": {
+     "corrected": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      0.15670006409869433
+     ],
+     "delta": -0.0023574068688896888,
+     "submitted": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      0.15905747096758402
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      0.15670006409869433
+     ],
+     "delta": -0.0023574068688896888,
+     "submitted": [
+      "protein_pyrococcus/DMIMLkNN_MinH(10)",
+      0.15905747096758402
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "reuters": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.0009238095238094379,
+    "paper_best": {
+     "corrected": [
+      "reuters/MIMLNN",
+      0.9677017856999999
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "reuters/MIMLNN",
+      0.9677017856999999
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "reuters/MIMLIBLR_MaxH(10)",
+      0.8945561507936508
+     ],
+     "delta": 0.0004333333333332856,
+     "submitted": [
+      "reuters/MIMLIBLR_MaxH(10)",
+      0.8941228174603175
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.016000000000000014,
+    "paper_best": {
+     "corrected": [
+      "reuters/MIMLNN",
+      0.258
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "reuters/MIMLNN",
+      0.258
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "reuters/MIMLIBLR_MaxH(10)",
+      0.5355
+     ],
+     "delta": -0.01100000000000001,
+     "submitted": [
+      "reuters/MIMLIBLR_MaxH(10)",
+      0.5465
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0005714285714285838,
+    "paper_best": {
+     "corrected": [
+      "reuters/MIMLNN",
+      0.029857142859999998
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "reuters/MIMLNN",
+      0.029857142859999998
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "reuters/MIMLDGC_MaxH(10)",
+      0.05714285714285715
+     ],
+     "delta": -0.000428571428571424,
+     "submitted": [
+      "reuters/MIMLDGC_MaxH(10)",
+      0.05757142857142857
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.0010000000000000009,
+    "paper_best": {
+     "corrected": [
+      "reuters/MIMLNN",
+      0.053500000000000006
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "reuters/MIMLNN",
+      0.053500000000000006
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "reuters/MIMLDGC_MaxH(10)",
+      0.163
+     ],
+     "delta": 0.0005000000000000004,
+     "submitted": [
+      "reuters/MIMLDGC_MaxH(10)",
+      0.1625
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0011749999999999955,
+    "paper_best": {
+     "corrected": [
+      "reuters/MIMLNN",
+      0.015575
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "reuters/MIMLNN",
+      0.015575
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "reuters/MIMLIBLR_MaxH(10)",
+      0.06140833333333332
+     ],
+     "delta": -0.0006416666666666584,
+     "submitted": [
+      "reuters/MIMLIBLR_MaxH(10)",
+      0.06204999999999998
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "scene": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.0014444444444444704,
+    "paper_best": {
+     "corrected": [
+      "scene/MIMLIBLR_MaxH(10)",
+      0.8783555555555557
+     ],
+     "delta": 0.00014999999999998348,
+     "submitted": [
+      "scene/MIMLIBLR_MaxH(10)",
+      0.8782055555555557
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "scene/MIMLIBLR_MaxH(10)",
+      0.8783555555555557
+     ],
+     "delta": 0.00014999999999998348,
+     "submitted": [
+      "scene/MIMLIBLR_MaxH(10)",
+      0.8782055555555557
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.009500000000000064,
+    "paper_best": {
+     "corrected": [
+      "scene/MIMLIBLR_MinH(10)",
+      0.6555
+     ],
+     "delta": -0.009500000000000064,
+     "submitted": [
+      "scene/MIMLIBLR_MinH(10)",
+      0.665
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "scene/MIMLIBLR_MinH(10)",
+      0.6555
+     ],
+     "delta": -0.009500000000000064,
+     "submitted": [
+      "scene/MIMLIBLR_MinH(10)",
+      0.665
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.0007000000000000339,
+    "paper_best": {
+     "corrected": [
+      "scene/MIMLIBLR_AveH(10)",
+      0.13189999999999982
+     ],
+     "delta": -0.0006999999999999784,
+     "submitted": [
+      "scene/MIMLIBLR_AveH(10)",
+      0.1325999999999998
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "scene/MIMLIBLR_AveH(10)",
+      0.13189999999999982
+     ],
+     "delta": -0.0006999999999999784,
+     "submitted": [
+      "scene/MIMLIBLR_AveH(10)",
+      0.1325999999999998
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.0030000000000000027,
+    "paper_best": {
+     "corrected": [
+      "scene/MIMLIBLR_MaxH(10)",
+      0.18
+     ],
+     "delta": 0.0005000000000000004,
+     "submitted": [
+      "scene/MIMLIBLR_MaxH(10)",
+      0.1795
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "scene/MIMLIBLR_MaxH(10)",
+      0.18
+     ],
+     "delta": 0.0005000000000000004,
+     "submitted": [
+      "scene/MIMLIBLR_MaxH(10)",
+      0.1795
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.001041666666666663,
+    "paper_best": {
+     "corrected": [
+      "scene/MIMLIBLR_MinH(10)",
+      0.09520833333333334
+     ],
+     "delta": -0.0010000000000000009,
+     "submitted": [
+      "scene/MIMLIBLR_MinH(10)",
+      0.09620833333333334
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "scene/MIMLIBLR_MinH(10)",
+      0.09520833333333334
+     ],
+     "delta": -0.0010000000000000009,
+     "submitted": [
+      "scene/MIMLIBLR_MinH(10)",
+      0.09620833333333334
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    2,
+    3,
+    4,
+    7,
+    8,
+    9
+   ]
+  },
+  "yeast": {
+   "AveragePrecision": {
+    "max_abs_delta_any_tuned_config": 0.0004249263217845911,
+    "paper_best": {
+     "corrected": [
+      "yeast/MIMLIBLR_MaxH(10)",
+      0.7593083390126653
+     ],
+     "delta": 0.0002989471449754699,
+     "submitted": [
+      "yeast/MIMLIBLR_MaxH(10)",
+      0.7590093918676898
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "yeast/MIMLIBLR_MaxH(10)",
+      0.7593083390126653
+     ],
+     "delta": 0.0002989471449754699,
+     "submitted": [
+      "yeast/MIMLIBLR_MaxH(10)",
+      0.7590093918676898
+     ]
+    }
+   },
+   "Coverage": {
+    "max_abs_delta_any_tuned_config": 0.03112033195020647,
+    "paper_best": {
+     "corrected": [
+      "yeast/MIMLIBLR_AveH(10)",
+      6.242323651452282
+     ],
+     "delta": -0.03070539419087126,
+     "submitted": [
+      "yeast/MIMLIBLR_AveH(10)",
+      6.2730290456431534
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "yeast/MIMLIBLR_AveH(10)",
+      6.242323651452282
+     ],
+     "delta": -0.03070539419087126,
+     "submitted": [
+      "yeast/MIMLIBLR_AveH(10)",
+      6.2730290456431534
+     ]
+    }
+   },
+   "HammingLoss": {
+    "max_abs_delta_any_tuned_config": 0.00029638411381155416,
+    "paper_best": {
+     "corrected": [
+      "yeast/MIMLBRkNN",
+      0.19653230586840548
+     ],
+     "delta": -0.00029638411381149865,
+     "submitted": [
+      "yeast/MIMLBRkNN",
+      0.19682868998221698
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "yeast/MIMLBRkNN_MinH(10)",
+      0.19673977474807353
+     ],
+     "delta": -0.00029638411381149865,
+     "submitted": [
+      "yeast/MIMLBRkNN_MinH(10)",
+      0.19703615886188502
+     ]
+    }
+   },
+   "OneError": {
+    "max_abs_delta_any_tuned_config": 0.0,
+    "paper_best": {
+     "corrected": [
+      "yeast/MIMLIBLR_MaxH(10)",
+      0.23029045643153526
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "yeast/MIMLIBLR_MaxH(10)",
+      0.23029045643153526
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "yeast/MIMLIBLR_MaxH(10)",
+      0.23029045643153526
+     ],
+     "delta": 0.0,
+     "submitted": [
+      "yeast/MIMLIBLR_MaxH(10)",
+      0.23029045643153526
+     ]
+    }
+   },
+   "RankingLoss": {
+    "max_abs_delta_any_tuned_config": 0.000768341600440009,
+    "paper_best": {
+     "corrected": [
+      "yeast/MIMLIBLR_AveH(10)",
+      0.17098969700851738
+     ],
+     "delta": -0.0007667923198450832,
+     "submitted": [
+      "yeast/MIMLIBLR_AveH(10)",
+      0.17175648932836246
+     ]
+    },
+    "tuned_best": {
+     "corrected": [
+      "yeast/MIMLIBLR_AveH(10)",
+      0.17098969700851738
+     ],
+     "delta": -0.0007667923198450832,
+     "submitted": [
+      "yeast/MIMLIBLR_AveH(10)",
+      0.17175648932836246
+     ]
+    }
+   },
+   "folds_with_any_change": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  }
+ },
+ "stored_mirror_reproduces_committed_tables": {
+  "macros_generated.tex": true,
+  "tab_ablation.tex": true,
+  "tab_conflict.tex": true,
+  "tab_fivemetric.tex": true,
+  "tab_full.tex": true,
+  "tab_headline.tex": true,
+  "tab_holm.tex": true,
+  "tab_notevaluated.tex": true
+ },
+ "tuned": {
+  "max_abs_probe_run_minus_stored": 0.0,
+  "other_per_fold_keys_not_corrected": [],
+  "rows": 2205
+ }
+}
